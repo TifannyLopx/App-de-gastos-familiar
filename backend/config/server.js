@@ -2,8 +2,7 @@ const supabase = require('./supabase');
 
 async function probarConexion() {
     console.log("Intentando conectar a Supabase...");
-    
-    // Consulta rápida a la tabla Usuarios
+     
     const { data, error } = await supabase.from('Usuarios').select('*').limit(1);
 
     if (error) {
